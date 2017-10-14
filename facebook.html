@@ -83,9 +83,9 @@
 	}
 	function getLocation() {
 		FB.api('/me?fields=location', function(response) {
-			console.log('Your current location is ' + response.name);
+			console.log('Your current location is ' + response.location.name);
 			document.getElementById('status').innerHTML =
-				'Your current location is ' + response.name;
+				'Your current location is ' + response.location.name;
 		});
 	}
 
