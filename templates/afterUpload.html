@@ -1,0 +1,19 @@
+{% extends "upload.html" %}
+
+{{super()}}
+
+{% block firstAdd %} {% endblock %}
+
+{% block content %}
+  <h1>RECORDING WHAT WAS FOUND!!!</h1>
+  <p class="important">The trash identified is a {{answer}}</p>
+
+
+  <p> add another piece of trash</p>
+  <form action = "http://localhost:5000/uploader" method = "POST" 
+         enctype = "multipart/form-data">
+         <input type = "file" name = "file" />
+         <input type = "submit"/>
+      </form>
+
+{% endblock %}
