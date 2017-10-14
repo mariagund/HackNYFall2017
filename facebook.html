@@ -82,10 +82,10 @@
     });
 	}
 		function getLocation() {
-			FB.api('/me', function(response) {
-				console.log('Your current location is ' + response.location.name);
+			FB.api('/me', {fields: 'location'}, function(response) {
+				console.log('Your current location is ' + response.name);
 				document.getElementById('status').innerHTML =
-					'Your current location is ' + response.location.name;
+					'Your current location is ' + response.name;
 			});
 		}
 </script>
