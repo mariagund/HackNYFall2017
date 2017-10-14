@@ -75,19 +75,20 @@
   // successful.  See statusChangeCallback() for when this call is made.
   function testAPI() {
     console.log('Welcome!  Fetching your information.... ');
-    FB.api('/me', function(response) {
+    FB.api('/me?', function(response) {
       console.log('Successful login for: ' + response.name);
       document.getElementById('status').innerHTML =
         'Thanks for logging in, ' + response.name + '!';
     });
 	}
-		function getLocation() {
-			FB.api('/me', {fields: 'location'}, function(response) {
-				console.log('Your current location is ' + response.name);
-				document.getElementById('status').innerHTML =
-					'Your current location is ' + response.name;
-			});
-		}
+	function getLocation() {
+		FB.api('/me?fields=location', function(response) {
+			console.log('Your current location is ' + response.name);
+			document.getElementById('status').innerHTML =
+				'Your current location is ' + response.name;
+		});
+	}
+
 </script>
 
 <!--
@@ -96,7 +97,7 @@
   the FB.login() function when clicked.
 -->
 
-<fb:login-button scope="public_profile,email,user_location" onlogin="checkLoginState();">
+<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
 </fb:login-button>
 
 <div id="status">
