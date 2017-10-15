@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <title>Pick Up</title>
+
+         <!-- Bootstrap CSS CDN -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!-- Our Custom CSS -->
+        <link rel="stylesheet" href="static/css/cleanpage.css">
+    </head>
+    <body>
+
+
+
+        <div class="wrapper">
+            <!-- Sidebar Holder -->
+            <nav id="sidebar">
+                <div class="sidebar-header">
+                    <h3>OceanCache</h3>
+                </div>
+
+                <ul class="list-unstyled components">
+                    <li class="active">
+                        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Beaches</a>
+                        <ul class="collapse list-unstyled" id="homeSubmenu">
+                            <li><a href="/trashnewportbeach">Newport Beach</a></li>
+                            <li><a href="/trashpensacola">Pensacola</a></li>
+                            <li><a href="/trashlajolla">La Jolla Cove</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="/about">About</a>
+                    </li>
+                    <li>
+			<a target="_blank" href="https://healthebay.org/donate/">Donate</a>
+                    </li>
+                    <li>
+			<a href="#">Contact</a>
+                    </li>
+                </ul>
+
+                <ul class="list-unstyled CTAs">
+                    <li><a href="#" class="download">Post to Facebook!</a></li>
+                    <li>
+                    <fb:login-button align="center" scope="public_profile,email,user_location,publish_actions" onlogin="checkLoginState();"></fb:login-button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+            <!-- Page Content Holder -->
+	    <div id="content">
+		  <div id="usuck">                
+			{% block firstAdd %}
+			<form action = "http://localhost:5000/cleanthebeach" method = "POST"
+			enctype = "multipart/form-data">
+			<input type = "file" name = "file" id="filename"/>
+			<input type = "submit" id="submit"/>
+			</form>
+			{% endblock %}
+            
+		  </div>
+        <div id="circ" class="circle-text">
+            <br /><br /><br />{{answer}}
+            </div>
+            <div id="location" align="center" class="loc">
+                
+            </div>
+				
+		
+            
+		</div>
+    
+
+    <script>
+    function statusChangeCallback(response) {
+        console.log('statusChangeCallback');
+            console.log(response);
+    // The response object is returned with a status field that lets the
+    // app know the current login status of the person.
+    // Full docs on the response object can be found in the documentation
+    // for FB.getLoginStatus().
+        if (response.status === 'connected') {
+      // Logged into your app and Facebook.
+              testAPI();
+                    getLocation();
+        }
+        else {
+        // The person is not logged into your app or we are unable to tell.
+            //document.getElementById('status').innerHTML = 'Please log ' +
+            //'into this app.';
+        }
+    }
+  // This function is called when someone finishes with the Login
+  // Button.  See the onlogin handler attached to it in the sample
+  // code below.
+    function checkLoginState() {
+        FB.getLoginStatus(function(response) {
+        statusChangeCallback(response);
+        });
+    }
+    window.fbAsyncInit = function() {
+    FB.init({
+        appId      : '737295826481160',
+        cookie     : true,  // enable cookies to allow the server to access
+                        // the session
+        xfbml      : true,  // parse social plugins on this page
+        version    : 'v2.8' // use graph api version 2.8
+    });
+  // Now that we've initialized the JavaScript SDK, we call
+  // FB.getLoginStatus().  This function gets the state of the
+  // person visiting this page and can return one of three states to
+  // the callback you provide.  They can be:
+  //
+  // 1. Logged into your app ('connected')
+  // 2. Logged into Facebook, but not your app ('not_authorized')
+  // 3. Not logged into Facebook and can't tell if they are logged into
+  //    your app or not.
+  //
+  // These three cases are handled in the callback function.
+  FB.getLoginStatus(function(response) {
+    statusChangeCallback(response);
+  });
+  };
+  // Load the SDK asynchronously
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+  // Here we run a very simple test of the Graph API after login is
+  // successful.  See statusChangeCallback() for when this call is made.
+    var userName;
+    var location;
+  function testAPI() {
+    console.log('Welcome!  Fetching your information.... ');
+    FB.api('/me?', function(response) {
+      console.log('Successful login for: ' + response.name);
+            userName = response.name;
+      //document.getElementById('status').innerHTML =
+        //'Thanks for logging in, ' + response.name + '!';
+    });
+    }
+    function getLocation() {
+        FB.api('/me?fields=location', function(response) {
+            console.log('Your current location is ' + response.location.name);
+            //location = response.location.name;
+            //document.getElementById('status').innerHTML =
+                //'Your current location is ' + response.location.name;
+        });
+        FB.api('me/feed', 'post', {
+            //name: "Maria Gund",
+            message: "I just picked up a can in New York City!",
+            //place: "106039436102339"
+        }, function (response) {
+            if (!response || response.error) {
+            //alert('Error occured');
+        } else {
+            /*alert('Post ID: ' + response.id);*/
+        }
+        }
+        );
+    }
+</script>
+
+    <<script>
+        var map, infoWindow;
+
+        function coordinates_to_address(lat, lng) {
+          var latlng = new google.maps.LatLng(lat, lng);
+          var geocoder = new google.maps.Geocoder();
+
+          geocoder.geocode({'latLng': latlng}, function(results, status) {
+              if(status == google.maps.GeocoderStatus.OK) {
+                  if(results[0]) {
+                      document.getElementById('circ').innerHTML += results[0].formatted_address
+                      //$('#circ').text(document.getElementById('circ').innerHTML + results[0].formatted_address);
+                  } else {
+                      alert('No results found');
+                  }
+              } else {
+                  var error = {
+                      'ZERO_RESULTS': 'Kunde inte hitta adress'
+                  }
+
+                  // alert('Geocoder failed due to: ' + status);
+                  $('#address_new').html('<span class="color-red">' + error[status] + '</span>');
+              }
+          });
+        }
+        function initMap() {
+          $(document).ready(function() {
+            // Try HTML5 geolocation.
+            if (navigator.geolocation) {
+              navigator.geolocation.getCurrentPosition(function(position) {
+                var pos = {
+                  lat: position.coords.latitude,
+                  lng: position.coords.longitude
+                };
+                console.log(pos.lat)
+                var finalLocation = coordinates_to_address(pos.lat, pos.lng);
+            document.getElementById('circ').innerHTML += " at "//'<br /> Location: ' + pos.lat + pos.lng;
+
+              }, function() {
+                handleLocationError();
+              });
+            } else {
+              // Browser doesn't support Geolocation
+              handleLocationError();
+            }
+          })
+        }
+
+        function handleLocationError() {
+          console.log("location error")
+        }
+    </script>
+
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6dmnq-6pIwTldiWg1OzRytz6awNUbIGE&callback=initMap"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+    
+
+        <!-- jQuery CDN -->
+         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+         <!-- Bootstrap Js CDN -->
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+         <!-- jQuery Nicescroll CDN -->
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.6.8-fix/jquery.nicescroll.min.js"></script>
+
+         <script type="text/javascript">
+             $(document).ready(function () {
+                 $("#sidebar").niceScroll({
+                     cursorcolor: '#53619d',
+                     cursorwidth: 4,
+                     cursorborder: 'none'
+                 });
+
+                 $('#sidebarCollapse').on('click', function () {
+                     $('#sidebar, #content').toggleClass('active');
+                     $('.collapse.in').toggleClass('in');
+                     $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+                 });
+             });
+         </script>
+    </body>
+</html>
