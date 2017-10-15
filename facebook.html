@@ -21,8 +21,8 @@
     	}
 		else {
       	// The person is not logged into your app or we are unable to tell.
-      		document.getElementById('status').innerHTML = 'Please log ' +
-        	'into this app.';
+      		//document.getElementById('status').innerHTML = 'Please log ' +
+        	//'into this app.';
     	}
   	}
 
@@ -73,20 +73,30 @@
 
   // Here we run a very simple test of the Graph API after login is
   // successful.  See statusChangeCallback() for when this call is made.
+	var userName;
+	var location;
   function testAPI() {
     console.log('Welcome!  Fetching your information.... ');
     FB.api('/me?', function(response) {
       console.log('Successful login for: ' + response.name);
-      document.getElementById('status').innerHTML =
-        'Thanks for logging in, ' + response.name + '!';
+			userName = response.name;
+      //document.getElementById('status').innerHTML =
+        //'Thanks for logging in, ' + response.name + '!';
     });
 	}
 	function getLocation() {
 		FB.api('/me?fields=location', function(response) {
 			console.log('Your current location is ' + response.location.name);
-			document.getElementById('status').innerHTML =
-				'Your current location is ' + response.location.name;
+			location = response.location.name;
+			//document.getElementById('status').innerHTML =
+				//'Your current location is ' + response.location.name;
 		});
+		FB.api('me/feed', 'post', {
+			name: userName,
+			message: "I just picked up a can in New York City!",
+			place: location
+		}, function (response) {}
+		);
 	}
 
 </script>
