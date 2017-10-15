@@ -87,6 +87,8 @@ imput a different picture and see how our model identifies it as a different typ
 
 to get more awareness about ocean cleanups and game-ify ocean cleanups, we added capability to compete with your facebook friends on who can pick up the most trash and added a share button that posts a status to your wall sharing how to get more involved with beach cleanups!
 
+Through this button you can post to your wall about how you are picking up trash though OceanCache!
+
 **Kevin: Firebase**
 
 our database collects information as said before and keeps track of it like so
@@ -94,3 +96,5 @@ our database collects information as said before and keeps track of it like so
 we chose to use firebase because
 
 with this data, we are then able to display the data so that users can best understand the data and share it with others so that they can understand it too.
+
+We also have a donate button and an about us section!
