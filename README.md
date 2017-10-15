@@ -1,5 +1,12 @@
 # HackNYFall2017
 
+#todo
+
+- [ ] domain name at domain.com
+- [ ] finish devpost
+- [ ] add more data visualizations
+- [ ] add facebook post integration
+
 ## Inspiration
 
 Wanting to keep our beaches and parks clean and help keep track of our efforts so we can best create laws and make lifestyfle changes to better the planet, we created OceanCleanup. As a frequent volunteer for beach cleanups, I know the flawed system that is used. Volunteers must carry around a piece of paper and write down the names of the items they find and keep a tally of the totals of each different trash category. At the end of the beach cleanup, the paper slips are collected and a voluneer manually inputs this data into the trash collection database. With this data, organizations like Heal the Bay can target efforts towards reducing trash found on beaches with real data. This will permit Heal the Bay's volunteers to spend time evaluating the data found and how to best reduce trash found at the beach!
