@@ -59,6 +59,22 @@ This can also be used in cities like New York to keep NYC's parks clean :)
 
 Natalie: Why
 
+Raise your hand if you like going to the beach
+
+Keep your hand raised and raise your hand if you like marine life and want ocean animals to be happy and healthy
+
+Me too!
+
+I'm from California and have been volunteering with an organization Heal the Bay since I was little
+
+At beach cleanups, each volunteer has a piece of paper and a trash bag that they walk around with and they write down evey item of trash they pick up, keeping a tally of the total number of bottles, cans, and everything they find.
+
+At the end of the cleanup, one volunteer collects all the slips of paper and manually inputs this data into Heal the Bay's trash collection database.
+
+With this information, Heal the Bay targets their efforts towards limiting the amount of trash found at the beach. Recently LA banned plastic bags - this was in part due to efforts led by beach cleanup organizations after they found that one of the most found items at beach cleanups were plastic bags. 
+
+With this app, instead of spending valuable volunteer hours on inputting data, volunteers can spend their time evaluating the data found, working on pushing new laws like this one, and making real changes.
+
 Someone: How/Clarifai API/GoogleMaps API
 
 Someone: Social media posting to game-ify cleaning up and get more users and to build awareness
