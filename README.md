@@ -57,7 +57,7 @@ This can also be used in cities like New York to keep NYC's parks clean :)
 
 # Presentation
 
-Natalie: Why
+**Natalie: Why**
 
 Raise your hand if you like going to the beach
 
@@ -75,8 +75,22 @@ With this information, Heal the Bay targets their efforts towards limiting the a
 
 With this app, instead of spending valuable volunteer hours on inputting data, volunteers can spend their time evaluating the data found, working on pushing new laws like this one, and making real changes.
 
-Someone: How/Clarifai API/GoogleMaps API
+**Someone: How/Clarifai API/GoogleMaps API**
+
+walk through use of app:
+
+imput a picture, this image goes through a Clarifai Model we made and classifies the image as a type of trash, this is automatically added to our Firebase Database with the location found using the GoogleMaps API
+
+imput a different picture and see how our model identifies it as a different type of trash and ups the number in the Firebase Database
 
 Someone: Social media posting to game-ify cleaning up and get more users and to build awareness
 
+to get more awareness about ocean cleanups and game-ify ocean cleanups, we added capability to compete with your facebook friends on who can pick up the most trash and added a share button that posts a status to your wall sharing how to get more involved with beach cleanups!
+
 Kevin: Firebase
+
+our database collects information as said before and keeps track of it like so
+
+we chose to use firebase because
+
+with this data, we are then able to display the data so that users can best understand the data and share it with others so that they can understand it too.
