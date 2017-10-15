@@ -33,6 +33,8 @@ SO MUCH!!
 
 We learned about how to make Flask templates and make PULL requests and made an awesome and super helpful site.
 
+How to pronounce "La Jolla", the mutual friend game is really fun, sweet potato, quinoa and curry chicken are a GREAT combo.
+
 ## What's next for OceanCleanup
 
 Bring it to Heal The Bay!!!
