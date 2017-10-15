@@ -4,7 +4,7 @@
 
 - [ ] domain name at domain.com
 - [ ] finish devpost
-- [ ] add more data visualizations for the rest of the beaches
+- [x] add more data visualizations for the rest of the beaches
 - [ ] add facebook post integration
 - [ ] take screenshots and add them to devpost
 - [ ] add map and map option on firebase
