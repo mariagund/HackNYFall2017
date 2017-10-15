@@ -1,15 +1,20 @@
-# HackNYFall2017
+# HackNY Fall 2017
+
+Our Project: OceanCache - a website where users can take pictures of the trash they find and it will automatically be input into a database to save ocean cleanup volunteers from having to manually keep track of the trash they find
+
+cache-em-all.com
 
 # todo
 
-- [ ] domain name at domain.com
+- [x] domain name at domain.com
 - [ ] finish devpost
-- [ ] add more data visualizations for the rest of the beaches
+- [x] add more data visualizations for the rest of the beaches
 - [ ] add facebook post integration
 - [ ] take screenshots and add them to devpost
-- [ ] add map and map option on firebase
+- [x] add map coordinates
+- [x] map option on firebase
 - [ ] fix submit buttons
-- [ ] change wording to "thank you for submitting a" can
+- [x] change wording to "thank you for submitting a" can
 
 ## Inspiration
 
@@ -49,3 +54,13 @@ Game-ify OceanCleanup so that users can compete with their facebook friends to s
 
 This can also be used in cities like New York to keep NYC's parks clean :)
 
+
+# Presentation
+
+Natalie: Why
+
+Someone: How/Clarifai API/GoogleMaps API
+
+Someone: Social media posting to game-ify cleaning up and get more users and to build awareness
+
+Kevin: Firebase
