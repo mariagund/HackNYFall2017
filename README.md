@@ -54,3 +54,13 @@ Game-ify OceanCleanup so that users can compete with their facebook friends to s
 
 This can also be used in cities like New York to keep NYC's parks clean :)
 
+
+# Presentation
+
+Natalie: Why
+
+Someone: How/Clarifai API/GoogleMaps API
+
+Someone: Social media posting to game-ify cleaning up and get more users and to build awareness
+
+Kevin: Firebase
