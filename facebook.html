@@ -92,11 +92,15 @@
 				//'Your current location is ' + response.location.name;
 		});
 		FB.api('me/feed', 'post', {
-			name: "Maria Gund",
+			//name: "Maria Gund",
 			message: "I just picked up a can in New York City!",
-			place: "106039436102339"
+			//place: "106039436102339"
 		}, function (response) {
-			console.log("posted to feed")
+			if (!response || response.error) {
+    		alert('Error occured');
+  		} else {
+    		alert('Post ID: ' + response.id);
+  		}
 		}
 		);
 	}
