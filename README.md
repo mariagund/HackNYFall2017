@@ -83,11 +83,11 @@ imput a picture, this image goes through a Clarifai Model we made and classifies
 
 imput a different picture and see how our model identifies it as a different type of trash and ups the number in the Firebase Database
 
-Someone: Social media posting to game-ify cleaning up and get more users and to build awareness
+**Someone: Social media posting to game-ify cleaning up and get more users and to build awareness**
 
 to get more awareness about ocean cleanups and game-ify ocean cleanups, we added capability to compete with your facebook friends on who can pick up the most trash and added a share button that posts a status to your wall sharing how to get more involved with beach cleanups!
 
-Kevin: Firebase
+**Kevin: Firebase**
 
 our database collects information as said before and keeps track of it like so
 
