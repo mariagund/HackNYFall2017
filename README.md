@@ -11,8 +11,8 @@ cache-em-all.com
 - [x] add more data visualizations for the rest of the beaches
 - [ ] add facebook post integration
 - [ ] take screenshots and add them to devpost
-- [ ] add map
-- [ ] map option on firebase
+- [x] add map coordinates
+- [x] map option on firebase
 - [ ] fix submit buttons
 - [x] change wording to "thank you for submitting a" can
 
