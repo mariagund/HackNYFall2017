@@ -9,6 +9,7 @@
 - [ ] take screenshots and add them to devpost
 - [ ] add map and map option on firebase
 - [ ] fix submit buttons
+- [ ] change wording to "thank you for submitting a" can
 
 ## Inspiration
 
