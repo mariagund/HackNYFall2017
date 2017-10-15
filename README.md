@@ -1,6 +1,6 @@
 # HackNYFall2017
 
-#todo
+# todo
 
 - [ ] domain name at domain.com
 - [ ] finish devpost
