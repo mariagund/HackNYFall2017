@@ -1,4 +1,4 @@
-# HackNY Fall 2017
+# HackNY Fall 2017 - Best Hack for Social Good
 
 Our Project: OceanCache - a website where users can take pictures of the trash they find and it will automatically be input into a database to save ocean cleanup volunteers from having to manually keep track of the trash they find
 
